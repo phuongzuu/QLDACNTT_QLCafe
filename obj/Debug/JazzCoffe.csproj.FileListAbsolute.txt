@@ -1,0 +1,98 @@
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\JazzCoffe.exe.config
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\JazzCoffe.exe
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\JazzCoffe.pdb
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\EPPlus.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\itextsharp.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Buffers.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Memory.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\EPPlus.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\itextsharp.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Buffers.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Memory.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.csproj.AssemblyReference.cache
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fBan.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fChamCong.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fChiTietHoaDon.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fChiTietNhapKho.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fCongThucDoUong.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fDanhmucdouong.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fDanhmucloaidouong.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fDoiMatKhau.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fHoaDon.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fKhachhang.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fNguyenLieu.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fNhanVien.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.FLogin.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.fNhapkho.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.Properties.Resources.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.TableManeger.resources
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.csproj.GenerateResource.cache
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.csproj.Up2Date
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.exe
+C:\Users\ASUS\Source\Repos\NMCNPM\obj\Debug\JazzCoffe.pdb
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\JazzCoffe.exe.config
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\JazzCoffe.exe
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\JazzCoffe.pdb
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\BouncyCastle.Cryptography.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\EntityFramework.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\EntityFramework.SqlServer.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\EPPlus.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\EPPlus.Interfaces.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\itextsharp.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Buffers.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.ComponentModel.Annotations.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Memory.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Numerics.Vectors.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Security.Cryptography.Xml.dll
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\BouncyCastle.Cryptography.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\EntityFramework.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\EntityFramework.SqlServer.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\EPPlus.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\itextsharp.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Buffers.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Memory.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Numerics.Vectors.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\bin\Debug\System.Security.Cryptography.Xml.xml
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.csproj.AssemblyReference.cache
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fBan.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fChamCong.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fChiTietHoaDon.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fChiTietNhapKho.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fCongThucDoUong.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fDanhmucdouong.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fDanhmucloaidouong.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fDoiMatKhau.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fHoaDon.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fKhachhang.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fNguyenLieu.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fNhanVien.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.FLogin.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.fNhapkho.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.Properties.Resources.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.TableManeger.resources
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.csproj.GenerateResource.cache
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.csproj.CoreCompileInputs.cache
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.csproj.Up2Date
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.exe
+D:\PhwnZuuu\Hoc laptrinh\hoc qq gi do\HK5\NMCNPM\NMCNPM\obj\Debug\JazzCoffe.pdb
