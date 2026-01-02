@@ -38,7 +38,6 @@ SQL Server (hoặc SQL Server Express)
 
 B1: Clone dự án từ GitHub
 
-git clone https://github.com/Kiet1204/NMCNPM.git
 
 B2: Mở file solution
 
