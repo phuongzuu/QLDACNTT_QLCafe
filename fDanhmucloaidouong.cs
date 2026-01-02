@@ -36,9 +36,6 @@ namespace JazzCoffe
 
             dtgvTypeDrink.DataSource = dsLoaiDoUong;
 
-
-            // Có thể ẩn cột nếu muốn
-            // dtgvNhanVien.Columns["MatKhau"].Visible = false;
         }
 
 
@@ -146,7 +143,7 @@ namespace JazzCoffe
             if (result.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy loại đồ uống nào.");
-                dtgvTypeDrink.DataSource = null; // hoặc LoadData() nếu muốn load lại
+                dtgvTypeDrink.DataSource = null;
                 return;
             }
 

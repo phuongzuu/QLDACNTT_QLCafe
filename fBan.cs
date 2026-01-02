@@ -24,7 +24,7 @@ namespace JazzCoffe
         }
         private void LoadData()
         {
-            using (var db = new QuanLyCafeEntities2()) // DbContext của bạn
+            using (var db = new QuanLyCafeEntities2()) 
             {
                 var dsBan = db.Bans
                     .Select(ba => new
@@ -39,7 +39,6 @@ namespace JazzCoffe
                 dtgvBan.DataSource = dsBan;
             }
 
-            // Có thể ẩn cột nếu muốn
             // dtgvNhanVien.Columns["MatKhau"].Visible = false;
         }
 

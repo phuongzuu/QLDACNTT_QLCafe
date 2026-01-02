@@ -18,7 +18,6 @@ namespace JazzCoffe
         {
             LoadDataCongThucDoUong();
 
-            // Đặt tên cột rõ ràng (tùy chọn)
             dtgvCongThucDoUong.Columns["MaDoUong"].HeaderText = "Mã đồ uống";
             dtgvCongThucDoUong.Columns["TenDoUong"].HeaderText = "Tên đồ uống";
             dtgvCongThucDoUong.Columns["MaNguyenLieu"].HeaderText = "Mã nguyên liệu";
@@ -43,7 +42,7 @@ namespace JazzCoffe
             dtgvCongThucDoUong.DataSource = data.ToList();
         }
 
-        // 🔹 Khi click chọn 1 dòng => đổ dữ liệu ra TextBox
+
         private void dtgvCongThucDoUong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -56,7 +55,6 @@ namespace JazzCoffe
             }
         }
 
-        // 🔹 THÊM công thức
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -65,7 +63,6 @@ namespace JazzCoffe
                 int maNL = int.Parse(txtMaNL.Text);
                 double soLuongDung = double.Parse(txtSoLuongCanDung.Text);
 
-                // Kiểm tra trùng (vì có thể là khóa chính kép)
                 var tonTai = db.CongThucDoUongs.FirstOrDefault(x => x.MaDU == maDU && x.MaNL == maNL);
                 if (tonTai != null)
                 {
@@ -92,7 +89,6 @@ namespace JazzCoffe
             }
         }
 
-        // 🔹 XÓA công thức
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -128,7 +124,6 @@ namespace JazzCoffe
             }
         }
 
-        // 🔹 SỬA công thức (chỉ cho phép sửa Số lượng dùng)
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try

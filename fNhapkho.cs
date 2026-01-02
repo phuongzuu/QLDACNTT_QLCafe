@@ -15,8 +15,7 @@ namespace JazzCoffe
         QuanLyCafeEntities2 db = new QuanLyCafeEntities2();
 
         List<PhieuNhapTam> phieuNhapTam = new List<PhieuNhapTam>();
-        int maPhieuNhapHienTai = 1;  // Mã phiếu nhập cho lượt hiện tại
-        //bool daNhapThanhCong = false; // Kiểm tra xem đã hoàn tất lượt nhập chưa
+        int maPhieuNhapHienTai = 1;
         public fNhapkho()
         {
             InitializeComponent();
@@ -25,7 +24,6 @@ namespace JazzCoffe
         private void fNhapkho_Load(object sender, EventArgs e)
         {
             LoadNguyenLieu();
-            //LoadPhieuNhapKho();
             var lastPN = db.PhieuNhapKhoes.OrderByDescending(p => p.MaPN).FirstOrDefault();
             maPhieuNhapHienTai = (lastPN != null) ? lastPN.MaPN + 1 : 1;
 
@@ -33,7 +31,6 @@ namespace JazzCoffe
 
         private void LoadNguyenLieu()
         {
-            // Lấy dữ liệu từ bảng NguyenLieu và hiển thị lên DataGridView
             dtgvNguyenLieu.DataSource = db.NguyenLieux
                 .Select(nl => new
                 {
@@ -115,11 +112,10 @@ namespace JazzCoffe
             dtgvPhieuNhapKhoTam.Columns["DonGiaNhap"].HeaderText = "Đơn giá";
             dtgvPhieuNhapKhoTam.Columns["NgayNhap"].HeaderText = "Ngày nhập";
 
-            dtgvPhieuNhapKhoTam.Columns["DonGiaNhap"].DefaultCellStyle.Format = "N0"; // Có dấu phân cách hàng nghìn
+            dtgvPhieuNhapKhoTam.Columns["DonGiaNhap"].DefaultCellStyle.Format = "N0";
             dtgvPhieuNhapKhoTam.Columns["DonGiaNhap"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dtgvPhieuNhapKhoTam.Columns["DonGiaNhap"].HeaderText = "Đơn giá nhập (VNĐ)";
 
-            // 🔹 Định dạng cột Ngày nhập (hiển thị dd/MM/yyyy)
             dtgvPhieuNhapKhoTam.Columns["NgayNhap"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dtgvPhieuNhapKhoTam.Columns["NgayNhap"].HeaderText = "Ngày nhập";
             decimal tong = phieuNhapTam.Sum(x => (decimal)x.DonGiaNhap);

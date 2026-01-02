@@ -14,7 +14,7 @@ namespace JazzCoffe
 {
     public partial class fChiTietHoaDon : Form
     {
-        private int maHD; // Vì MaHD là kiểu int trong CSDL
+        private int maHD;
         private string tenNhanVien;
         private string maBan;
         private DateTime ngay;
@@ -25,7 +25,7 @@ namespace JazzCoffe
         {
             InitializeComponent();
 
-            // Gán giá trị cho các biến thành viên
+
             this.maHD = maHD;
             this.tenNhanVien = tenNhanVien;
             this.maBan = maBan;
@@ -33,18 +33,17 @@ namespace JazzCoffe
             this.tongTien = tongTien;
             this.danhSach = danhSach;
 
-            // Gọi phương thức hiển thị
             HienThiThongTin();
         }
 
         private void HienThiThongTin()
         {
-            // Hiển thị thông tin lên các label
+
             lbMaHD.Text = maHD.ToString();
             lbThuNgan.Text = tenNhanVien;
             lbMaBan.Text = maBan;
 
-            // Đảm bảo đang dùng DateTime thật
+            // Realtime
             if (ngay is DateTime)
             {
                 lbDate.Text = ngay.ToString("dd/MM/yyyy");
@@ -54,10 +53,8 @@ namespace JazzCoffe
                 lbDate.Text = DateTime.Parse(ngay.ToString()).ToString("dd/MM/yyyy");
             }
 
-            // ✅ Định dạng tiền tệ có dấu phân cách hàng nghìn
             lbTong.Text = tongTien.ToString("N0") + " VND";
 
-            // Gán dữ liệu cho DataGridView
             dtgvChiTietHoaDon.DataSource = danhSach;
         }
 
@@ -136,7 +133,12 @@ namespace JazzCoffe
         private void btPrintBill_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            printPreviewDialog1.ShowDialog(); MessageBox.Show(
+        "Thanh toán thành công!",
+        "Thông báo",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information
+    );
         }
     }
 }

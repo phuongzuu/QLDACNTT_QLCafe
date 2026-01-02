@@ -37,8 +37,6 @@ namespace JazzCoffe
                 dtgvKhachHang.DataSource = dsNhanVien;
             
 
-            // Có thể ẩn cột nếu muốn
-            // dtgvNhanVien.Columns["MatKhau"].Visible = false;
         }
 
         private void dtgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -62,7 +60,7 @@ namespace JazzCoffe
 
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Tự động tạo MaKH mới tăng dần
+
             int maxMaKH = db.KhachHangs
                 .Select(kh => kh.MaKH)
                 .DefaultIfEmpty(0)

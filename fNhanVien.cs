@@ -33,7 +33,7 @@ namespace JazzCoffe
         {
             cbChucVu.Items.Add("Quản trị viên");
             cbChucVu.Items.Add("Nhân viên");
-            cbChucVu.SelectedIndex = 0; // chọn mặc định
+            cbChucVu.SelectedIndex = 0; 
             LoadData();
         }
 
@@ -58,9 +58,6 @@ namespace JazzCoffe
 
 
 
-
-            // Có thể ẩn cột nếu muốn
-            // dtgvNhanVien.Columns["MatKhau"].Visible = false;
         }
 
 
@@ -92,7 +89,7 @@ namespace JazzCoffe
                 StringBuilder sb = new StringBuilder();
                 foreach (byte b in hash)
                 {
-                    sb.Append(b.ToString("x2")); // chuyển mỗi byte sang dạng hex
+                    sb.Append(b.ToString("x2")); 
                 }
                 return sb.ToString();
             }
@@ -109,10 +106,8 @@ namespace JazzCoffe
                 decimal luong = 0;
                 decimal.TryParse(txtLuongCoBan.Text, out luong);
 
-                // 🔹 Mã hóa mật khẩu mặc định là "123"
                 string matKhauMaHoa = HashPassword("123");
 
-                // 🔹 Tạo đối tượng nhân viên mới
                 NhanVien nv = new NhanVien()
                 {
                     MaNV = maNV,
@@ -123,7 +118,6 @@ namespace JazzCoffe
                     LuongCoBanTheoGio = luong
                 };
 
-                // 🔹 Thêm vào DB
                 db.NhanViens.Add(nv);
                 db.SaveChanges();
 
@@ -140,7 +134,6 @@ namespace JazzCoffe
         {
             string maNV = txtMaNV.Text.Trim();
 
-            // Kiểm tra nhập thiếu
             if (string.IsNullOrWhiteSpace(txtMaNV.Text) ||
                 string.IsNullOrWhiteSpace(txtTenNV.Text) ||
                 string.IsNullOrWhiteSpace(txtNVPassword.Text) ||
@@ -152,14 +145,12 @@ namespace JazzCoffe
                 return;
             }
 
-            // Kiểm tra lương hợp lệ
             if (!decimal.TryParse(txtLuongCoBan.Text, out decimal luongCoBan))
             {
                 MessageBox.Show("Lương cơ bản phải là số hợp lệ.");
                 return;
             }
 
-            // Tìm nhân viên cần sửa
             var nv = db.NhanViens.FirstOrDefault(n => n.MaNV == maNV);
             if (nv == null)
             {
@@ -167,7 +158,6 @@ namespace JazzCoffe
                 return;
             }
 
-            // Cập nhật thông tin
             nv.TenNV = txtTenNV.Text.Trim();
             nv.MatKhau = txtNVPassword.Text.Trim();
             nv.SDT = txtSDT.Text.Trim();
@@ -190,14 +180,12 @@ namespace JazzCoffe
         {
             string maNV = txtMaNV.Text.Trim();
 
-            // Kiểm tra có nhập mã chưa
             if (string.IsNullOrWhiteSpace(maNV))
             {
                 MessageBox.Show("Vui lòng nhập hoặc chọn mã nhân viên cần xóa.");
                 return;
             }
 
-            // Tìm nhân viên cần xóa
             var nv = db.NhanViens.FirstOrDefault(n => n.MaNV == maNV);
             if (nv == null)
             {
@@ -205,7 +193,6 @@ namespace JazzCoffe
                 return;
             }
 
-            // Xác nhận xóa
             DialogResult result = MessageBox.Show(
                 $"Bạn có chắc chắn muốn xóa nhân viên '{nv.TenNV}' không?",
                 "Xác nhận xóa",
@@ -232,7 +219,7 @@ namespace JazzCoffe
 
         private void RefreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Xóa nội dung các ô nhập
+
             txtMaNV.Clear();
             txtTenNV.Clear();
             txtNVPassword.Clear();
@@ -240,10 +227,8 @@ namespace JazzCoffe
             txtLuongCoBan.Clear();
             txtSearchNameNV.Clear();
 
-            // Tải lại toàn bộ dữ liệu
             LoadData();
 
-            // Đưa con trỏ về ô đầu tiên
             txtTenNV.Focus();
         }
 
@@ -257,7 +242,6 @@ namespace JazzCoffe
                 return;
             }
 
-            // Lọc danh sách nhân viên theo tên
             var result = db.NhanViens
                 .Where(nv => nv.TenNV.ToLower().Contains(keyword))
                 .Select(nv => new
@@ -271,10 +255,8 @@ namespace JazzCoffe
                 })
                 .ToList();
 
-            // Gán kết quả vào DataGridView
             dtgvNhanVien.DataSource = result;
 
-            // Nếu không tìm thấy kết quả
             if (result.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy nhân viên nào phù hợp với từ khóa đã nhập.");

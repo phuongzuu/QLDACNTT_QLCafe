@@ -38,7 +38,6 @@ namespace JazzCoffe
 
             dtgvDoUong.DataSource = dsDoUong;
 
-            // 🔹 Format VNĐ
             if (dtgvDoUong.Columns["DonGia"] != null)
             {
                 dtgvDoUong.Columns["DonGia"].DefaultCellStyle.Format = "#,##0 'VNĐ'";
@@ -95,7 +94,6 @@ namespace JazzCoffe
                     return;
                 }
 
-                // 🔹 Lấy mã loại theo tên loại
                 var maLoai = db.LoaiDoUongs
                     .Where(l => l.TenLoai == txtMaLDU.Text.Trim())
                     .Select(l => l.MaLoai)
@@ -107,10 +105,8 @@ namespace JazzCoffe
                     return;
                 }
 
-                // 🔹 Tạo mã đồ uống mới
                 string newMaDU = GenerateNewMaDU();
 
-                // 🔹 Tạo đối tượng
                 DoUong douong = new DoUong
                 {
                     MaDU = newMaDU,
@@ -128,7 +124,7 @@ namespace JazzCoffe
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException ex)
             {
-                // Xem chi tiết lỗi trong Output
+
                 foreach (var eve in ex.EntityValidationErrors)
                 {
                     foreach (var ve in eve.ValidationErrors)

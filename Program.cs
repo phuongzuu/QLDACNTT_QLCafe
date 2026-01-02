@@ -8,9 +8,6 @@ namespace JazzCoffe
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         public static string MaNV_DangNhap;
         public static string Quyen_DangNhap;
         public static string MatKhau_DangNhap;

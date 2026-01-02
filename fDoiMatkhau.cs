@@ -31,7 +31,6 @@ namespace JazzCoffe
                 return;
             }
 
-            // So sánh mật khẩu cũ nhập vào (đã mã hóa) với mật khẩu hiện tại
             string hashedOld = HashPassword(oldPass);
             if (hashedOld != matKhauHienTai)
             {
@@ -51,7 +50,7 @@ namespace JazzCoffe
 
                 if (nhanVien != null)
                 {
-                    nhanVien.MatKhau = HashPassword(newPass); // 🔹 Mã hóa mật khẩu mới
+                    nhanVien.MatKhau = HashPassword(newPass);
                     db.SaveChanges();
 
                     MessageBox.Show("Đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

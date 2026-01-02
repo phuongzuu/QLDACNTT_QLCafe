@@ -22,7 +22,7 @@ namespace JazzCoffe
 
         private void fChiTietNhapKho_Load(object sender, EventArgs e)
         {
-            // Lấy phiếu nhập theo mã
+            
             var phieu = db.PhieuNhapKhoes.FirstOrDefault(p => p.MaPN == maPhieuNhap);
             if (phieu == null)
             {
@@ -30,21 +30,17 @@ namespace JazzCoffe
                 return;
             }
 
-            // Hiển thị thông tin chung
             lblMaPN.Text = phieu.MaPN.ToString();
             lblMaNV.Text = phieu.MaNV;
 
-            // Định dạng ngày nhập dạng dd/MM/yyyy (nếu có)
             if (phieu.NgayNhap != null)
                 lblNgayNhap.Text = ((DateTime)phieu.NgayNhap).ToString("dd/MM/yyyy");
             else
                 lblNgayNhap.Text = "";
 
-            // Định dạng tổng chi phí có dấu phân cách và đơn vị VNĐ
             lblTongChiPhi.Text = string.Format("{0:#,##0} VNĐ", phieu.TongTien);
 
 
-            // Lấy tên nhân viên
             var nhanvien = db.NhanViens.FirstOrDefault(nv => nv.MaNV == phieu.MaNV);
             lblTenNV.Text = nhanvien != null ? nhanvien.TenNV : "(Không rõ)";
 

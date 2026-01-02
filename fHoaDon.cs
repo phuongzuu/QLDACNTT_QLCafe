@@ -62,33 +62,7 @@ namespace JazzCoffe
         }
         private void btnFill_Click(object sender, EventArgs e)
         {
-           /* DateTime tuNgay = dtpTuNgay.Value.Date;
-            DateTime denNgay = dtpDenNgay.Value.Date.AddDays(1).AddTicks(-1);
-            string trangThai = cbxTrangThai.SelectedItem.ToString();
 
-            var danhSachHoaDon = context.HoaDons
-                .Where(h => h.NgayLap >= tuNgay && h.NgayLap <= denNgay);
-
-            if (trangThai == "Đã thanh toán")
-                danhSachHoaDon = danhSachHoaDon.Where(h => h.TrangThai == "Đã thanh toán");
-            else if (trangThai == "Chưa thanh toán")
-                danhSachHoaDon = danhSachHoaDon.Where(h => h.TrangThai == "Chưa thanh toán");
-
-            var ketQua = danhSachHoaDon
-                .Select(hd => new
-                {
-                    hd.MaHD,
-                    NgayLap = hd.NgayLap,
-                    TenNhanVien = hd.NhanVien.TenNV,
-                    hd.TongTien,
-                    hd.TrangThai
-                })
-                .ToList();
-
-            dtgvHoaDon.DataSource = ketQua;
-
-            DinhDangCot();
-            TinhTongDoanhThu();*/
         }
 
         private void DinhDangCot()
@@ -106,7 +80,7 @@ namespace JazzCoffe
           
         }
 
-        // Không dùng đến nữa nhưng giữ lại nếu sau này cần
+
         public void CapNhatDanhSachHoaDon()
         {
             using (var db = new QuanLyCafeEntities2())
@@ -195,10 +169,9 @@ namespace JazzCoffe
             }
 
             lblTongDoanhThu.Text = tong.ToString("c0", new CultureInfo("vi-VN"));
-            return tong; // 👈 trả về tổng doanh thu
+            return tong;
         }
 
-        // Hàm tính tổng chi phí và trả về giá trị
         private decimal TinhTongChiPhi()
         {
             decimal tongChiPhi = 0;
@@ -210,17 +183,16 @@ namespace JazzCoffe
             }
 
             lblTongChiPhi.Text = string.Format("{0:#,##0} VNĐ", tongChiPhi);
-            return tongChiPhi; // 👈 trả về tổng chi phí
+            return tongChiPhi;
         }
 
-        // 👉 Hàm tính tổng lợi nhuận
+
         private void TinhTongLoiNhuan()
         {
             decimal doanhThu = TinhTongDoanhThu();
             decimal chiPhi = TinhTongChiPhi();
             decimal loiNhuan = doanhThu - chiPhi;
 
-            // Hiển thị lợi nhuận định dạng tiền tệ VNĐ
             txtTongLoiNhuan.Text = loiNhuan.ToString("#,##0 VNĐ", CultureInfo.InvariantCulture);
         }
 
@@ -261,7 +233,6 @@ namespace JazzCoffe
 
             dtgvHoaDon.DataSource = hoaDonLoc;
 
-            // Gọi lại hàm hiển thị biểu đồ
             LoadChartDoanhThu(tuNgay, denNgay);
         }
         private void btnLocPhieuNhap_Click(object sender, EventArgs e)
@@ -282,7 +253,7 @@ namespace JazzCoffe
             Series series = new Series("Doanh thu theo ngày");
             series.ChartType = SeriesChartType.Column;
             series.XValueType = ChartValueType.String;
-            series.IsValueShownAsLabel = true; // hiển thị giá trị trên cột
+            series.IsValueShownAsLabel = true;
             chartDoanhThu.Series.Add(series);
 
             using (var db = new QuanLyCafeEntities2())
@@ -352,18 +323,17 @@ namespace JazzCoffe
                     PdfWriter writer = PdfWriter.GetInstance(doc, fs);
                     doc.Open();
 
-                    // Font
                     string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "times.ttf");
                     BaseFont bf = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                     iTextSharp.text.Font fontTitle = new iTextSharp.text.Font(bf, 16, iTextSharp.text.Font.BOLD);
                     iTextSharp.text.Font fontHeader = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.BOLD);
                     iTextSharp.text.Font fontNormal = new iTextSharp.text.Font(bf, 11, iTextSharp.text.Font.NORMAL);
-                    // 🔹 Tiêu đề
+
                     Paragraph title = new Paragraph("BÁO CÁO THỐNG KÊ DOANH THU - CHI PHÍ - LỢI NHUẬN", fontTitle);
                     title.Alignment = Element.ALIGN_CENTER;
                     title.SpacingAfter = 20;
                     doc.Add(title);
-                    // ========== PHẦN I ==========
+  
                     Paragraph doanhThuHeader = new Paragraph("I. Danh sách hóa đơn", fontHeader);
                     doanhThuHeader.SpacingAfter = 8;
                     doc.Add(doanhThuHeader);
@@ -395,8 +365,6 @@ namespace JazzCoffe
                     Paragraph tongDT = new Paragraph($"Tổng doanh thu: {tongDoanhThu:#,##0 VNĐ}\n\n", fontHeader);
                     tongDT.SpacingAfter = 10;
                     doc.Add(tongDT);
-
-                    // ========== PHẦN II ==========
                     Paragraph chiPhiHeader = new Paragraph("II. Danh sách phiếu nhập kho", fontHeader);
                     chiPhiHeader.SpacingBefore = 10;
                     chiPhiHeader.SpacingAfter = 8;
@@ -429,8 +397,6 @@ namespace JazzCoffe
                     tongCP.SpacingAfter = 10;
                     doc.Add(tongCP);
 
-
-                    // ========== PHẦN III ==========
                     Paragraph tongKetHeader = new Paragraph("III. Tổng kết", fontHeader);
                     tongKetHeader.SpacingBefore = 10;
                     tongKetHeader.SpacingAfter = 8;

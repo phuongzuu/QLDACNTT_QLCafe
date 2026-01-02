@@ -62,7 +62,7 @@ namespace JazzCoffe
             {
                 TenNL = txtTenNL.Text,
                 DonViTinh = txtDonViTinh.Text,
-                SoLuongTon = 0, // mặc định ban đầu
+                SoLuongTon = 0, // mặc định
                 SoLuongToiThieu = double.TryParse(txtSLToiThieu.Text, out double sltt) ? sltt : 10,
                 GhiChu = txtGhiChu.Text
             };

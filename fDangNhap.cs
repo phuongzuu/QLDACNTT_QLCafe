@@ -25,10 +25,9 @@ namespace JazzCoffe
         {
             cboChucVu.Items.Add("Quản trị viên");
             cboChucVu.Items.Add("Nhân viên");
-            cboChucVu.SelectedIndex = 0; // chọn mặc định
+            cboChucVu.SelectedIndex = 0; 
         }
 
-        // 🔹 Hàm mã hóa SHA256 mật khẩu
         private string ComputeSha256Hash(string rawData)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -40,14 +39,12 @@ namespace JazzCoffe
             }
         }
 
-        // Kiểm tra chuỗi hex
         private bool IsHexString(string s)
         {
             if (string.IsNullOrEmpty(s)) return false;
             return s.All(c => Uri.IsHexDigit(c));
         }
 
-        // Chuẩn hoá stored hash: remove 0x prefix và lower
         private string NormalizeStoredHash(string stored)
         {
             if (string.IsNullOrEmpty(stored)) return string.Empty;
@@ -78,7 +75,7 @@ namespace JazzCoffe
 
             using (var context = new QuanLyCafeEntities2())
             {
-                // Tìm user theo MaNV (và chức vụ nếu muốn)
+
                 var user = context.NhanViens.FirstOrDefault(nv => nv.MaNV == taiKhoan && nv.Quyen.Trim() == chucVu.Trim());
 
                 if (user == null)
@@ -87,32 +84,31 @@ namespace JazzCoffe
                     return;
                 }
 
-                string stored = NormalizeStoredHash(user.MatKhau); // remove 0x, lowercase, handle null
+                string stored = NormalizeStoredHash(user.MatKhau);
 
                 bool passwordOk = false;
 
-                // Nếu stored có dạng SHA256 hex (64 hex chars)
                 if (stored.Length == 64 && IsHexString(stored))
                 {
                     passwordOk = string.Equals(stored, hashedInput, StringComparison.OrdinalIgnoreCase);
                 }
                 else
                 {
-                    // stored có thể là plaintext -> so sánh trực tiếp; nếu trùng thì nâng cấp lưu hash
+   
                     if (stored == matKhauNhap)
                     {
                         passwordOk = true;
-                        user.MatKhau = hashedInput; // nâng cấp lưu hash
+                        user.MatKhau = hashedInput;
                         context.SaveChanges();
                     }
                 }
 
                 if (passwordOk)
                 {
-                    // Lưu session/biến toàn cục
+
                     Program.MaNV_DangNhap = user.MaNV;
                     Program.Quyen_DangNhap = user.Quyen;
-                    Program.MatKhau_DangNhap = user.MatKhau; // hash
+                    Program.MatKhau_DangNhap = user.MatKhau;
 
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -126,7 +122,6 @@ namespace JazzCoffe
                     MessageBox.Show("Sai mật khẩu.", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                //MessageBox.Show($"Hash của mật khẩu bạn nhập là:\n{hashedInput}");
             }
         }
 
@@ -141,7 +136,7 @@ namespace JazzCoffe
 
         private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
         {
-            // Không cần xử lý gì thêm ở đây
+
         }
 
         private void cboChucVu_SelectedIndexChanged(object sender, EventArgs e)
